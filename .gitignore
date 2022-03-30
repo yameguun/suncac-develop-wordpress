@@ -1,37 +1,49 @@
-*~
-*.bak
-.DS_Store
-.buildpath
-.project
-.settings
-*.tmproj
-build
-.idea
-nbproject/
+# Wordpress - ignore core, configuration, examples, uploads and logs.
+# https://github.com/github/gitignore/blob/main/WordPress.gitignore
 
-Thumbs.db
-desktop.ini
+# Core
+#
+# Note: if you want to stage/commit WP core files
+# you can delete this whole section/until Configuration.
+/html/wp-admin/
+/html/wp-content/index.php
+/html/wp-content/languages
+/html/wp-content/plugins
+/html/wp-content/themes/index.php
+/html/wp-content/upgrade
+/html/wp-includes/
+/html/index.php
+/html/license.txt
+/html/readme.html
+/html/wp-*.php
+/html/xmlrpc.php
 
+# Configuration
+wp-config.php
+
+# Example themes
+/html/wp-content/themes/twenty*/
+
+# Example plugin
+/html/wp-content/plugins/hello.php
+
+# Uploads
+/html/wp-content/uploads/
+
+# Log files
 *.log
 
-index.php
-xmlrpc.php
-.htaccess
-license.txt
-readme.html
-sitemap.xml
-sitemap.xml.gz
+# htaccess
+/html/.htaccess
 
-wp-admin
-wp-includes
-wp-*.php
-**/wp-content/languages
-**/wp-content/uploads
-**/wp-content/upgrade
-**/wp-content/plugins
-**/wp-content/themes
-!**/wp-content/themes/**
-!**/wp-content/themes/*/index.php
+# All plugins
+#
+# Note: If you wish to whitelist plugins,
+# uncomment the next line
+#/wp-content/plugins
 
-!*/.htaccess
-!*/index.php
+# All themes
+#
+# Note: If you wish to whitelist themes,
+# uncomment the next line
+#/wp-content/themes
